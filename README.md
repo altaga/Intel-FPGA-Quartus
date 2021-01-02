@@ -11,6 +11,10 @@
 - [**Blaster USB Setup**](#blaster-usb-setup)
 - [**Project**](#project)
 - [**Code and Assignments**](#code-and-assignments)
+  - [**Code:**](#code)
+  - [**Assignment:**](#assignment)
+  - [**Compile and Program:**](#compile-and-program)
+- [**EPIC DEMO:**](#epic-demo)
 
 # **Introduction**
 
@@ -59,7 +63,53 @@ Here is a picture of the chip on my board (EP4CE6E22C8).
 
 # **Code and Assignments**
 
-En este caso estoy programando la FPGA en VDHL (aunque es posible utilizar Verilog tambien)
+## **Code:**
+In this case I am programming the FPGA in VDHL (although it is possible to use Verilog as well)
 
-Todos los archivos necesarios estaran en la carpeta "".
+All the necessary files will be in the "Code, Sof and Assigments" folder.
 
+Basically the code I use is an 8-bit binary up counter, with an enable switch and a buzzer (integrated in the board)
+
+    entity StormIV_Test is
+        port (
+            LED   :out std_logic_vector (7 downto 0);  -- Output of the counter
+            clk    :in  std_logic;                      -- Input clock
+            enable : in std_logic;
+            BEEP : out std_logic
+        );
+    end entity;
+
+In this case we can see that our entity has "variables" LED for the output to the LEDs, a clk that is the main clock of the board (50 MHZ), an enable that will help us to enable and disable the count and a BEEP that will be the buzzer.
+
+## **Assignment:**
+
+In this section we are going to relate the variables declared in / out with the physical ports of the board.
+
+**NOTE: Because I'm using a fairly cheap board, I had to create the Assignments file from scratch, checking port by port, if you have any errors please feel free to modify it.**
+
+The AssigmentsSTORM.qsf file specifically relates each of the board's ports with its integrated components (LEDs, 7 segments, Serial, etc).
+
+<img src="https://i.ibb.co/ZgZjMYH/image.png" width="600">
+
+## **Compile and Program:**
+
+Once we have everything ready, we can compile the code and program the FPGA.
+
+<img src="https://i.ibb.co/9cSQB4p/image.png" width="600">
+
+If the whole process went well, we should see a Compile design check mark, this indicates that we can program the FPGA with the code.
+
+To program the FPGA we must go to Tools/Programmer
+
+<img src="https://i.ibb.co/kSZXykD/image.png" width="600">
+
+Once there we can program the FPGA by pressing the Start button.
+
+<img src="https://i.ibb.co/tmsmwh7/image.png" width="600">
+
+# **EPIC DEMO:**
+
+Video: Click on the image
+[![FPGA](https://i.ibb.co/nnCw0Dq/20210101-220215.jpg)](https://youtu.be/pKwcr6r0GOY)
+
+Sorry github does not allow embed videos.
