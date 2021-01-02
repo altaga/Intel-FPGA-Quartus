@@ -62,7 +62,7 @@ In this case my board has the following version.
 
 Here is a picture of the chip on my board (EP4CE6E22C8).
 
-<img src="https://i.ibb.co/9cbfQFW/20210101-213102.jpg" width="600">
+<img src="https://i.ibb.co/7nDT5y7/Image.png" width="600">
 
 # **Code and Assignments**
 
