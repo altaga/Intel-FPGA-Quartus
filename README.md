@@ -1,5 +1,8 @@
 # **Intel-FPGA-Quartus**
+
  Example of how to program an Altera FPGA with Intel Quartus and VHDL.
+
+ <img src="https://i.ibb.co/nnCw0Dq/20210101-220215.jpg" width="600">
 
  # **Table of contents**
 
@@ -113,3 +116,4 @@ Video: Click on the image
 [![FPGA](https://i.ibb.co/nnCw0Dq/20210101-220215.jpg)](https://youtu.be/pKwcr6r0GOY)
 
 Sorry github does not allow embed videos.
+
